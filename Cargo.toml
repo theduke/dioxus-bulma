@@ -3,4 +3,13 @@ name = "dioxus-bulma"
 version = "0.1.0"
 edition = "2024"
 
+[features]
+default = ["embed_v1_0_2"]
+embed_v1_0_2 = ["dioxus/asset", "dioxus/document"]
+
+[lints.rust]
+# Allow snake_case for component function names.
+non_snake_case = "allow"
+
 [dependencies]
+dioxus = { version = "0.6.3", default-features = false, features = ["hooks", "html", "macro", "signals"] }
