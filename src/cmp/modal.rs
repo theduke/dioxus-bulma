@@ -1,7 +1,11 @@
 use dioxus::prelude::*;
 
 #[component]
-pub fn Modal(children: Element, on_close: EventHandler<()>) -> Element {
+pub fn Modal(
+    children: Element,
+    on_close: EventHandler<()>,
+    content_class: Option<&'static str>,
+) -> Element {
     // bulma modal
     rsx! {
         div {
@@ -14,6 +18,11 @@ pub fn Modal(children: Element, on_close: EventHandler<()>) -> Element {
             }
             div {
                 class: "modal-content",
+                class: if let Some(class) = content_class {
+                    "{class}"
+                } else {
+                    ""
+                },
                 {children}
             }
             button {
