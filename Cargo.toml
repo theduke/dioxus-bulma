@@ -5,12 +5,12 @@ edition = "2024"
 license = "MIT OR Apache-2.0"
 
 [features]
-default = ["embed_v1_0_2"]
-embed_v1_0_2 = ["dioxus/asset", "dioxus/document"]
+default = ["embed_v1_0_4"]
+embed_v1_0_4 = ["dioxus/asset", "dioxus/document"]
 
 [lints.rust]
 # Allow snake_case for component function names.
 non_snake_case = "allow"
 
 [dependencies]
-dioxus = { version = "0.7.0-alpha.3", default-features = false, features = ["hooks", "html", "macro", "signals"] }
+dioxus = { version = "0.7.0-rc.3", default-features = false, features = ["hooks", "html", "macro", "signals"] }
