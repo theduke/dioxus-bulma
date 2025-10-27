@@ -7,7 +7,7 @@
 //! Cargo.toml:
 //! ```toml
 //! [dependencies]
-//! dioxus-bulma = { version = "0.x.0", features = ["embed_v1_0_2"] }
+//! dioxus-bulma = { version = "0.x.0", features = ["embed_v1_0_4"] }
 //! ````
 //!
 //! ```rust
@@ -33,16 +33,16 @@ use dioxus::prelude::Element;
 ///   }
 /// }
 /// ```
-#[cfg(feature = "embed_v1_0_2")]
-pub fn StylesheetBulmaV1_0_2() -> dioxus::prelude::Element {
+#[cfg(feature = "embed_v1_0_4")]
+pub fn StylesheetBulmaV1_0_4() -> dioxus::prelude::Element {
     use dioxus::prelude::*;
 
     rsx! {
-        dioxus::document::Stylesheet { href: asset!("./assets/bulma_v1.0.2.min.css") }
+        dioxus::document::Stylesheet { href: asset!("assets/bulma_v1.0.4.min.css") }
     }
 }
 
-#[cfg(feature = "embed_v1_0_2")]
+#[cfg(feature = "embed_v1_0_4")]
 pub fn StylesheetBulma() -> Element {
-    StylesheetBulmaV1_0_2()
+    StylesheetBulmaV1_0_4()
 }
